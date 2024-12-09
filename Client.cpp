@@ -93,6 +93,7 @@ void userSolve() {
 }
 
 void SWAP(int i, int j) {
+	std::cout << i << " " << j << ln;
 	char ans[LEN];
 	memset(ans, '\0', sizeof(ans));
 	bool start = 0;
@@ -158,6 +159,7 @@ void smartSolve() {
 	int n = std::stoi(message);
     std::vector<int> a(n);
     for (int i = 0; i < n; ++i) {
+		std::cout << i;
         fd = open(path, O_WRONLY);
 		if (fd == -1) {
 			std::cerr << "Ошибка открытия канала." <<  ln;
@@ -178,7 +180,7 @@ void smartSolve() {
 			break;
 		}
 		message = ans;
-		std::cout << "Сервер: " << ans << ln;
+		std::cout << " : " << ans << ln;
 		memset(ans, '\0', sizeof(ans));
 		close(fd);
 		a[i] = stoi(message);
